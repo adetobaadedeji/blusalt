@@ -14,7 +14,7 @@ const Sidebar = () => {
         <section className="sidebar--container__logocontainer">
           <img src={Logo} alt="Logo" />
         </section>
-        <hr className="sidebar--container__hrline" />
+        <span className="sidebar--container__hrline" ></span>
         <nav className="sidebar--container__nav">
           <ul>
             {sidebarData.map(({ icon, title, arrow }, index) => (

@@ -28,12 +28,14 @@
 
     &__hrline {
       width: 92%;
+      border-bottom: 1px solid white;
       margin: 1.1rem auto 2.6rem;
-      opacity: 0.1;
+      opacity: 0.2;
       transition: $transition;
 
       @include sm-lapt {
-        margin-bottom: 0.3rem;
+        margin: 1rem auto 1.5rem;
+        // opacity: 0.8;
       }
     }
 
