@@ -4,10 +4,15 @@
   width: 100%;
   height: 8rem;
   background-color: #ffffff;
-  padding: 0px 2.8rem 0px 2rem;
+  padding: 0px 2.5rem 0px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  transition: $transition;
+
+  @include lg-lapt {
+    padding: 0px 2.8rem 0px 2.8rem;
+  }
 
   &__title {
     margin-right: auto;

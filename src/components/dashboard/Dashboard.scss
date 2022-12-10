@@ -4,9 +4,14 @@
   width: 100%;
   min-height: 100vh;
   background-color: #e5e5e5;
+  transition: $transition;
 
   &__main {
     width: 100%;
-    padding: 4rem 2.8rem 5rem 2rem;
+    padding: 4rem 2.5rem 5rem;
+
+    @include lg-lapt {
+      padding: 4rem 2.8rem 5rem;
+    }
   }
 }
