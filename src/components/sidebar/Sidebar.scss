@@ -2,7 +2,6 @@
 
 .sidebar {
   position: relative;
-  // min-width: 18rem;
   width: 17.6%;
   max-width: 25.3rem;
   height: 100vh;
@@ -35,7 +34,6 @@
 
       @include sm-lapt {
         margin: 1rem auto 1.5rem;
-        // opacity: 0.8;
       }
     }
 
@@ -64,7 +62,10 @@
 
           @include sm-lapt {
             justify-content: center;
-            padding: 1.7rem 0rem 1.7rem 0rem;
+            padding: 1rem 0rem;
+
+            flex-direction: column;
+            gap: 0.5rem;
           }
 
           img {
@@ -82,7 +83,11 @@
             letter-spacing: 0.05rem;
 
             @include sm-lapt {
-              display: none;
+              font-size: 1rem;
+              font-weight: 300;
+              color: #ffffff;
+              opacity: 0.6;
+              margin: 0;
             }
           }
 
@@ -105,6 +110,11 @@
           &:hover {
             cursor: pointer;
             @include custom-active();
+            border-color: rgba(255, 255, 255, 0);
+
+            .title {
+              opacity: 1;
+            }
           }
 
           &.active {
