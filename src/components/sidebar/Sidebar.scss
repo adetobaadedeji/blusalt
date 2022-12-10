@@ -1,0 +1,121 @@
+@import "../../index.scss";
+
+.sidebar {
+  position: relative;
+  // width: 16rem;
+  width: 17.6%;
+  max-width: 25.3rem;
+  height: 100vh;
+  padding: 3rem 1.4rem;
+  background-color: $pink;
+  transition: $transition;
+
+  &--container {
+    height: calc(100vh - 6.7rem);
+    display: flex;
+    flex-direction: column;
+
+    &__logocontainer {
+      width: 100%;
+      text-align: center;
+      transition: $transition;
+    }
+
+    &__hrline {
+      width: 92%;
+      margin: 11px auto 26px;
+      opacity: 0.1;
+      transition: $transition;
+    }
+
+    &__nav {
+      width: 100%;
+      transition: $transition;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        // gap: 2.8rem;
+        gap: 1.8rem;
+
+        li {
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding: 9px 0px 7px 0.85rem;
+          background-color: $pink;
+          border-radius: 5px 3px 3px 5px;
+          border-right: 3px solid $pink;
+          transition: $transition;
+
+          .title {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #ffffff;
+            opacity: 0.6;
+            margin-left: 1.25rem;
+            letter-spacing: 0.05rem;
+          }
+
+          .arrow-container {
+            width: 20px;
+            height: 20px;
+            margin-left: auto;
+            margin-right: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            @include custom-background(0.4);
+          }
+
+          &:hover {
+            cursor: pointer;
+            @include custom-active();
+          }
+
+          &.active {
+            @include custom-active();
+
+            .title {
+              opacity: 1;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    &__user {
+      width: 95%;
+      height: 68px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      @include custom-background(0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: auto;
+
+      img {
+        border-radius: 50%;
+      }
+
+      &--name {
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.075rem;
+        margin-bottom: 1px;
+      }
+
+      &--position {
+        @include custom-color(0.5);
+        font-size: 1rem;
+        letter-spacing: 0.12rem;
+      }
+    }
+  }
+}

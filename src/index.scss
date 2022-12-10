@@ -1,0 +1,92 @@
+// Colors
+$pink: #990D81;
+
+//transition
+$transition: all 300ms ease-in-out;
+
+// Media Querie Break Points
+// Small phones
+$screen-tn-max: 450px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 596px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Phone devices
+@mixin tn {
+  @media (max-width: #{$screen-tn-max}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin custom-color($opacity){
+  color: rgba(255, 255, 255, $opacity);
+}
+@mixin custom-background($opacity){
+  background: rgba(255, 255, 255, $opacity);
+}
+@mixin custom-active(){
+  @include custom-background(0.1);
+  border-right: 3px solid white;
+  transition: $transition;
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+
+  // @include lg {
+  //   font-size: 58%;
+  // }
+  // @include md {
+  //   font-size: 52%;
+  // }
+  // @include sm {
+  //   font-size: 50%;
+  // }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+// .page-container {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: calc(100vh - 23rem);
+// }
