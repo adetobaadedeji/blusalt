@@ -35,10 +35,12 @@ const Sidebar = () => {
           </ul>
         </nav>
         <section className="sidebar--container__user">
-          <img src={User} alt="" />
-          <section>
-            <div className="sidebar--container__user--name">Nafisa Sh.</div>
-            <span className="sidebar--container__user--position">
+          <img src={User} alt="User Profile" />
+          <section className="sidebar--container__user--details">
+            <div className="sidebar--container__user--details--name">
+              Nafisa Sh.
+            </div>
+            <span className="sidebar--container__user--details--position">
               Support manager
             </span>
           </section>

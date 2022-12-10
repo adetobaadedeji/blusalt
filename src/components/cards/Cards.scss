@@ -1,0 +1,67 @@
+@import "../../index.scss";
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.9rem;
+  margin-bottom: 4rem;
+  transition: $transition;
+}
+
+.card {
+  width: 27rem;
+  // width: 100%;
+  height: 12.3rem;
+  padding: 1.6rem 0px 1.7rem 1.9rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.9rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  transition: $transition;
+
+
+  &--icon {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &--details {
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+
+    &__value {
+      font-weight: 600;
+      font-size: 2.4rem;
+      color: #171717;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      color: #aaaaaa;
+      margin-top: 2px;
+    }
+
+    &__analytics {
+      display: flex;
+      margin-top: 18px;
+      font-size: 1.4rem;
+
+      &--percent {
+        font-weight: 400;
+        margin: 0px 1rem 0px 0.5rem;
+      }
+
+      &--time {
+        color: #bdbdbd;
+      }
+    }
+  }
+}

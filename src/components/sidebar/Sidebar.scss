@@ -2,13 +2,18 @@
 
 .sidebar {
   position: relative;
-  // width: 16rem;
+  // min-width: 18rem;
   width: 17.6%;
   max-width: 25.3rem;
   height: 100vh;
   padding: 3rem 1.4rem;
   background-color: $pink;
   transition: $transition;
+  z-index: 900;
+
+  @include sm-lapt {
+    width: 10rem;
+  }
 
   &--container {
     height: calc(100vh - 6.7rem);
@@ -23,9 +28,13 @@
 
     &__hrline {
       width: 92%;
-      margin: 11px auto 26px;
+      margin: 1.1rem auto 2.6rem;
       opacity: 0.1;
       transition: $transition;
+
+      @include sm-lapt {
+        margin-bottom: 0.3rem;
+      }
     }
 
     &__nav {
@@ -36,8 +45,10 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        // gap: 2.8rem;
         gap: 1.8rem;
+        @include sm-lapt {
+          gap: 0.5rem;
+        }
 
         li {
           position: relative;
@@ -45,9 +56,20 @@
           align-items: center;
           padding: 9px 0px 7px 0.85rem;
           background-color: $pink;
-          border-radius: 5px 3px 3px 5px;
+          border-radius: 0.5rem 0.3rem 0.3rem 0.5rem;
           border-right: 3px solid $pink;
           transition: $transition;
+
+          @include sm-lapt {
+            justify-content: center;
+            padding: 1.7rem 0rem 1.7rem 0rem;
+          }
+
+          img {
+            @include sm-lapt {
+              transform: scale(1.2);
+            }
+          }
 
           .title {
             font-size: 1.4rem;
@@ -56,6 +78,10 @@
             opacity: 0.6;
             margin-left: 1.25rem;
             letter-spacing: 0.05rem;
+
+            @include sm-lapt {
+              display: none;
+            }
           }
 
           .arrow-container {
@@ -68,6 +94,10 @@
             align-items: center;
             border-radius: 50%;
             @include custom-background(0.4);
+
+            @include sm-lapt {
+              display: none;
+            }
           }
 
           &:hover {
@@ -89,7 +119,7 @@
 
     &__user {
       width: 95%;
-      height: 68px;
+      height: 6.8rem;
       margin: 0 auto;
       display: flex;
       gap: 0.8rem;
@@ -99,22 +129,37 @@
       padding: 1rem;
       margin-top: auto;
 
+      @include sm-lapt {
+        justify-content: center;
+        height: 5.8rem;
+        padding: 0rem;
+      }
+
       img {
         border-radius: 50%;
+        @include sm-lapt {
+          transform: scale(0.9);
+        }
       }
 
-      &--name {
-        color: #ffffff;
-        font-size: 1.4rem;
-        font-weight: 500;
-        letter-spacing: 0.075rem;
-        margin-bottom: 1px;
-      }
+      &--details {
+        @include sm-lapt {
+          display: none;
+        }
 
-      &--position {
-        @include custom-color(0.5);
-        font-size: 1rem;
-        letter-spacing: 0.12rem;
+        &--name {
+          color: #ffffff;
+          font-size: 1.4rem;
+          font-weight: 500;
+          letter-spacing: 0.075rem;
+          margin-bottom: 1px;
+        }
+
+        &--position {
+          @include custom-color(0.5);
+          font-size: 1rem;
+          letter-spacing: 0.12rem;
+        }
       }
     }
   }

@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Cards from "../cards/Cards";
+import Header from "../header/Header";
+import "./Dashboard.scss";
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <section className="dashboard">
+      <Header />
+      <main className="dashboard__main">
+        <Cards />
+      </main>
+    </section>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

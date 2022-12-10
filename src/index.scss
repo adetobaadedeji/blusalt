@@ -1,62 +1,104 @@
 // Colors
-$pink: #990D81;
+$pink: #990d81;
 
 //transition
 $transition: all 300ms ease-in-out;
 
 // Media Querie Break Points
-// Small phones
-$screen-tn-max: 450px;
+// Phones
+$screen-sm-phone: 320px;
+$screen-md-phone: 360px;
+$screen-lg-phone: 414px;
+$screen-xlg-phone: 480px;
 
-// Small tablets and large smartphones (landscape view)
-$screen-sm-max: 596px;
+// Tablets (portrait to landscape view)
+$screen-sm-tab: 768px;
+$screen-md-tab: 960px;
+$screen-lg-tab: 1024px;
+$screen-xlg-tab: 1220px;
 
-// Small tablets (portrait view)
-$screen-md-max: 768px;
-
-// Tablets and small desktops
-$screen-lg-max: 992px;
+//lapton screens
+$screen-sm-lapt: 1280px;
+$screen-md-lapt: 1366px;
+$screen-lg-lapt: 1440px;
+$screen-xlg-lapt: 1600px;
 
 // Phone devices
-@mixin tn {
-  @media (max-width: #{$screen-tn-max}) {
+@mixin sm-phone {
+  @media (max-width: #{$screen-sm-phone}) {
+    @content;
+  }
+}
+@mixin md-phone {
+  @media (max-width: #{$screen-md-phone}) {
+    @content;
+  }
+}
+@mixin lg-phone {
+  @media (max-width: #{$screen-lg-phone}) {
+    @content;
+  }
+}
+@mixin xlg-phone {
+  @media (max-width: #{$screen-xlg-phone}) {
+    @content;
+  }
+}
+// Tablet devices
+@mixin sm-tab {
+  @media (max-width: #{$screen-sm-tab}) {
+    @content;
+  }
+}
+@mixin md-tab {
+  @media (max-width: #{$screen-md-tab}) {
+    @content;
+  }
+}
+@mixin lg-tab {
+  @media (max-width: #{$screen-lg-tab}) {
+    @content;
+  }
+}
+@mixin xlg-tab {
+  @media (max-width: #{$screen-xlg-tab}) {
+    @content;
+  }
+}
+// Laptop devices
+@mixin sm-lapt {
+  @media (max-width: #{$screen-sm-lapt}) {
+    @content;
+  }
+}
+@mixin md-lapt {
+  @media (max-width: #{$screen-md-lapt}) {
+    @content;
+  }
+}
+@mixin lg-lapt {
+  @media (max-width: #{$screen-lg-lapt}) {
+    @content;
+  }
+}
+@mixin xlg-lapt {
+  @media (max-width: #{$screen-xlg-lapt}) {
     @content;
   }
 }
 
-// Small devices
-@mixin sm {
-  @media (max-width: #{$screen-sm-max}) {
-    @content;
-  }
-}
-
-// Medium devices
-@mixin md {
-  @media (max-width: #{$screen-md-max}) {
-    @content;
-  }
-}
-
-// Large devices
-@mixin lg {
-  @media (max-width: #{$screen-lg-max}) {
-    @content;
-  }
-}
-
-@mixin custom-color($opacity){
+@mixin custom-color($opacity) {
   color: rgba(255, 255, 255, $opacity);
 }
-@mixin custom-background($opacity){
+@mixin custom-background($opacity) {
   background: rgba(255, 255, 255, $opacity);
 }
-@mixin custom-active(){
+@mixin custom-active() {
   @include custom-background(0.1);
-  border-right: 3px solid white;
+  border-color:  white;
+  // border-right: 3px solid white;
   transition: $transition;
 }
-
 
 *,
 *::before,
@@ -82,7 +124,8 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 
 // .page-container {
