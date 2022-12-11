@@ -3,10 +3,10 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <AppContext.Provider value={{ toggleSidebar, setToggleSidebar }}>
+    <AppContext.Provider value={{ isSidebarOpen, setSidebarOpen }}>
       {children}
     </AppContext.Provider>
   );

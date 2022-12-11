@@ -9,15 +9,15 @@ const Sidebar = () => {
   // a link with an active state will be used it a real project
   const [selected, setSelected] = useState(0);
 
-  const { toggleSidebar, setToggleSidebar } = useAppContext();
+  const { isSidebarOpen, setSidebarOpen } = useAppContext();
 
   const handleSidebarToggle = () => {
-    setToggleSidebar(!toggleSidebar);
+    setSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <aside
-      className={`sidebar ${toggleSidebar ? "openSidebar" : "closeSidebar"}`}
+      className={`sidebar ${isSidebarOpen ? "openSidebar" : "closeSidebar"}`}
     >
       <section className="sidebar--container">
         <section className="sidebar--container__logocontainer">

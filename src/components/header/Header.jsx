@@ -5,11 +5,11 @@ import { notificationsIcons } from "../../utils/data";
 import "./Header.scss";
 
 const Header = () => {
-  const { toggleSidebar, setToggleSidebar } = useAppContext();
-  console.log("first", toggleSidebar)
+  const { isSidebarOpen, setSidebarOpen } = useAppContext();
+ 
 
   const handleSidebarToggle = () => {
-    setToggleSidebar(!toggleSidebar);
+    setSidebarOpen(!isSidebarOpen);
   };
 
   return (
