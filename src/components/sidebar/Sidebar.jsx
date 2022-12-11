@@ -2,19 +2,28 @@ import "./Sidebar.scss";
 import { DownArrow, Logo, User } from "../../assets";
 import { sidebarData } from "../../utils/data";
 import { useState } from "react";
+import { useAppContext } from "../../context/AppContext";
 
 const Sidebar = () => {
   // this is to show the active state on any of the menu
   // a link with an active state will be used it a real project
   const [selected, setSelected] = useState(0);
 
+  const { toggleSidebar, setToggleSidebar } = useAppContext();
+
+  const handleSidebarToggle = () => {
+    setToggleSidebar(!toggleSidebar);
+  };
+
   return (
-    <aside className="sidebar">
+    <aside
+      className={`sidebar ${toggleSidebar ? "openSidebar" : "closeSidebar"}`}
+    >
       <section className="sidebar--container">
         <section className="sidebar--container__logocontainer">
           <img src={Logo} alt="Logo" />
         </section>
-        <span className="sidebar--container__hrline" ></span>
+        <span className="sidebar--container__hrline"></span>
         <nav className="sidebar--container__nav">
           <ul>
             {sidebarData.map(({ icon, title, arrow }, index) => (
@@ -46,6 +55,19 @@ const Sidebar = () => {
           </section>
         </section>
       </section>
+      <button
+        onClick={handleSidebarToggle}
+        aria-label="close menu"
+        className="sidebar--button"
+      >
+        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17.071.1L19.9 2.93l-7.071 7.07 7.071 7.072-2.828 2.828L10 12.828l-7.071 7.071L.1 17.071 7.17 10 .102 2.929 2.929.1l7.07 7.07 7.072-7.07z"
+            fill="#990D81"
+            fillRule="evenodd"
+          ></path>
+        </svg>
+      </button>
     </aside>
   );
 };

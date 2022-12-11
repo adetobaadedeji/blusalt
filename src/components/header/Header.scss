@@ -14,12 +14,28 @@
     padding: 0px 2.8rem 0px 2.8rem;
   }
 
+  button {
+    outline: none;
+    border: 0px;
+    display: none;
+    cursor: pointer;
+
+    @include sm-tab {
+      display: inline-block;
+      margin-right: auto;
+    }
+  }
+
   &__title {
     margin-right: auto;
     font-weight: 700;
     font-size: 2.4rem;
     letter-spacing: 0.1rem;
     color: #171717;
+
+    @include sm-tab {
+      display: none;
+    }
   }
 
   &__search {
@@ -34,6 +50,11 @@
     height: 4rem;
     background: #fafafa;
     border-radius: 6px;
+    margin-left: 2rem;
+
+    @include xlg-phone {
+      display: none;
+    }
 
     .sr-only:not(:focus):not(:active) {
       clip: rect(0 0 0 0);

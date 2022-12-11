@@ -1,5 +1,5 @@
-import './App.scss';
-import { Dashboard, Sidebar } from './components';
+import "./App.scss";
+import { Dashboard, Sidebar } from "./components";
 
 function App() {
   return (
