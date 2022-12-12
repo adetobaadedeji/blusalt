@@ -13,5 +13,17 @@
     @include lg-lapt {
       padding: 4rem 2.8rem 5rem;
     }
+    
+    @include xlg-phone {
+      padding: 3rem 2.8rem;
+    }
+
+    @include md-phone {
+      padding: 2.2rem 1.8rem;
+    }
+
+    @include sm-phone {
+      padding: 1.5rem 1rem;
+    }
   }
 }

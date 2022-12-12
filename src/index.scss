@@ -7,8 +7,8 @@ $transition: all 300ms ease-in-out;
 // Media Querie Break Points
 // Phones
 $screen-sm-phone: 320px;
-$screen-md-phone: 360px;
-$screen-lg-phone: 414px;
+$screen-md-phone: 380px;
+$screen-lg-phone: 480px;
 $screen-xlg-phone: 540px;
 
 // Tablets (portrait to landscape view)
@@ -127,8 +127,4 @@ body {
   
 }
 
-// .page-container {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: calc(100vh - 23rem);
-// }
+

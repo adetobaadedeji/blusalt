@@ -11,7 +11,20 @@
   transition: $transition;
 
   @include lg-lapt {
-    padding: 0px 2.8rem 0px 2.8rem;
+    padding: 0px 2.8rem;
+  }
+
+  @include xlg-phone {
+    height: 7rem;
+  }
+
+  @include md-phone {
+    height: 6rem;
+    padding: 0px 1.8rem;
+  }
+
+  @include sm-phone {
+    padding: 0px 1rem;
   }
 
   button {
