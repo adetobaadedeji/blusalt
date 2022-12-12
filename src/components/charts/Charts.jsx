@@ -37,11 +37,11 @@ const Charts = () => {
           <section className="charts__left--info__data">
             <div>
               <p>AGENTS</p>
-              <span>475 273</span>
+              <span>475273</span>
             </div>
             <div>
               <p>USERS</p>
-              <span>782 396</span>
+              <span>782396</span>
             </div>
           </section>
         </section>
@@ -191,13 +191,13 @@ const NewUsersChart = () => {
   };
 
   return (
-    <div>
+    // <div>
       <Bar
         options={chartOptions}
         data={chartData}
         height={`250px`}
         style={{ width: "95%" }}
       />
-    </div>
+    // </div>
   );
 };

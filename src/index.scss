@@ -96,7 +96,6 @@ $screen-xlg-lapt: 1600px;
 @mixin custom-active() {
   @include custom-background(0.1);
   border-color:  white;
-  // border-right: 3px solid white;
   transition: $transition;
 }
 
