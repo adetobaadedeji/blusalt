@@ -191,13 +191,11 @@ const NewUsersChart = () => {
   };
 
   return (
-    // <div>
       <Bar
         options={chartOptions}
         data={chartData}
         height={`250px`}
         style={{ width: "95%" }}
       />
-    // </div>
   );
 };

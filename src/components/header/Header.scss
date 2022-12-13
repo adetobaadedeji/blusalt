@@ -101,5 +101,9 @@
     align-items: center;
     gap: 1.6rem;
     margin-left: 5.1rem;
+
+    @include smd-tab {
+      margin-left: 3.1rem;
+    }
   }
 }

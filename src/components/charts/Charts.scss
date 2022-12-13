@@ -2,7 +2,9 @@
 
 .charts {
   display: flex;
+  max-width: 100%;
   gap: 2rem;
+  margin-bottom: 2.7rem;
 
   @include sm-tab {
     flex-wrap: wrap;
@@ -19,9 +21,7 @@
     @include xlg-tab {
       width: 65%;
     }
-    @include md-tab {
-      // width: 57%;
-    }
+
     @include sm-tab {
       width: 100%;
     }

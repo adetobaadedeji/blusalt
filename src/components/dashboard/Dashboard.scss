@@ -2,9 +2,25 @@
 
 .dashboard {
   width: 100%;
-  // min-height: 100vh;
   background-color: #e5e5e5;
   transition: $transition;
+  padding-left: 25rem;
+
+  @include lg-lapt {
+    padding-left: 24rem;
+  }
+  @include md-lapt {
+    padding-left: 23rem;
+  }
+  @include smd-lapt {
+    padding-left: 22rem;
+  }
+  @include sm-lapt {
+    padding-left: 10rem;
+  }
+  @include sm-tab {
+    padding-left: 0px;
+  }
 
   &__main {
     width: 100%;
@@ -13,7 +29,7 @@
     @include lg-lapt {
       padding: 4rem 2.8rem 5rem;
     }
-    
+
     @include xlg-phone {
       padding: 3rem 2.8rem;
     }

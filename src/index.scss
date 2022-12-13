@@ -13,12 +13,14 @@ $screen-xlg-phone: 540px;
 
 // Tablets (portrait to landscape view)
 $screen-sm-tab: 768px;
+$screen-smd-tab: 845px;
 $screen-md-tab: 960px;
 $screen-lg-tab: 1024px;
 $screen-xlg-tab: 1220px;
 
 //lapton screens
 $screen-sm-lapt: 1285px;
+$screen-smd-lapt: 1304px;
 $screen-md-lapt: 1366px;
 $screen-lg-lapt: 1440px;
 $screen-xlg-lapt: 1600px;
@@ -50,6 +52,11 @@ $screen-xlg-lapt: 1600px;
     @content;
   }
 }
+@mixin smd-tab {
+  @media (max-width: #{$screen-smd-tab}) {
+    @content;
+  }
+}
 @mixin md-tab {
   @media (max-width: #{$screen-md-tab}) {
     @content;
@@ -68,6 +75,11 @@ $screen-xlg-lapt: 1600px;
 // Laptop devices
 @mixin sm-lapt {
   @media (max-width: #{$screen-sm-lapt}) {
+    @content;
+  }
+}
+@mixin smd-lapt {
+  @media (max-width: #{$screen-smd-lapt}) {
     @content;
   }
 }
@@ -123,7 +135,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  
+  scroll-behavior: smooth;
 }
 
 
