@@ -36,11 +36,11 @@ const Charts = () => {
           </section>
           <section className="charts__left--info__data">
             <div>
-              <p>AGENTS</p>
+              <p className="agents">AGENTS</p>
               <span>475273</span>
             </div>
             <div>
-              <p>USERS</p>
+              <p className="users">USERS</p>
               <span>782396</span>
             </div>
           </section>

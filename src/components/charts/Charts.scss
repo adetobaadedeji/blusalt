@@ -50,6 +50,10 @@
         align-items: center;
         gap: 5rem;
 
+        @include md-tab {
+          gap: 2rem;
+        }
+
         p {
           font-weight: 500;
           font-size: 1.2rem;
@@ -57,12 +61,37 @@
           text-transform: uppercase;
           color: #b9b9b9;
           margin-bottom: 0.8rem;
+          position: relative;
         }
 
         span {
           font-weight: 600;
           font-size: 1.6rem;
           color: #171717;
+        }
+
+        .agents,
+        .users {
+          &::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0.3rem;
+            left: -1.5rem;
+          }
+        }
+
+        .agents {
+          &::before {
+            background: #5f2eea;
+          }
+        }
+        .users {
+          &::before {
+            background: #4bde97;
+          }
         }
       }
     }
