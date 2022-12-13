@@ -1,14 +1,151 @@
 @import "../../index.scss";
 
-.table {
+.requests {
   width: 75%;
-  // max-width: 84.9rem;
   min-height: 40.3rem;
   background-color: #fff;
   box-shadow: 0px 2rem 2.7rem rgba(0, 0, 0, 0.05);
   border-radius: 1.2rem;
+  padding: 2.7rem 2rem 1.9rem;
 
   @include lg-tab {
     width: 100%;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #141414;
+    margin-bottom: 2.9rem;
+  }
+
+  .namemail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    @include min-sm-tab {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.7rem;
+    }
+
+    &__picture {
+      display: flex;
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      &--name {
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: #141414;
+      }
+
+      &--email {
+        font-size: 14px;
+        color: #8392ab;
+      }
+    }
+  }
+
+  .status {
+    border-radius: 10rem;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    min-width: 7.6rem;
+  }
+
+  .pendingStatus {
+    color: #ffb648;
+    background: rgba(255, 172, 50, 0.1);
+  }
+  .activeStatus {
+    color: #63b67f;
+    background: rgba(99, 182, 127, 0.1);
+  }
+
+  &__table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #8392ab;
+    font-family: "Open Sans";
+
+    thead {
+      visibility: hidden;
+      background: #ffffff;
+      @include min-sm-tab {
+        visibility: visible;
+      }
+    }
+
+    tr {
+      border-bottom: 2px solid #f5f5f5;
+      padding: 5px;
+      margin-bottom: 10px;
+      display: block;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include min-sm-tab {
+        display: table-row;
+        border-bottom-width: 1px;
+        margin-bottom: 0;
+
+        &:nth-child(even) {
+          background: #ffffff;
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      text-align: right;
+      font-size: 13px;
+      border-bottom: 1px dotted #f5f5f5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @include min-sm-tab {
+        display: table-cell;
+        text-align: left;
+        font-size: 14px;
+        border-bottom: none;
+      }
+    }
+
+    td:before {
+      content: attr(data-label);
+      display: flex;
+      font-weight: bold;
+      @include min-sm-tab {
+        content: "";
+        display: none;
+      }
+    }
   }
 }

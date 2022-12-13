@@ -47,6 +47,11 @@ $screen-xlg-lapt: 1600px;
   }
 }
 // Tablet devices
+@mixin min-sm-tab {
+  @media (min-width: #{$screen-sm-tab}) {
+    @content;
+  }
+}
 @mixin sm-tab {
   @media (max-width: #{$screen-sm-tab}) {
     @content;

@@ -13,13 +13,19 @@ import Alarm from "./icons/Alarm.svg";
 import Bulb from "./icons/Bulb.svg";
 import Lang from "./icons/Lang.svg";
 import Search from "./icons/Search.svg";
-import { ReactComponent as Approved } from './icons/Approved.svg';
-import { ReactComponent as GreenArrow } from './icons/GreenArrow.svg';
-import { ReactComponent as OrangeArrow } from './icons/OrangeArrow.svg';
-import { ReactComponent as RedArrow } from './icons/RedArrow.svg';
-import { ReactComponent as Pending } from './icons/Pending.svg';
-import { ReactComponent as TotalAgents } from './icons/TotalAgents.svg';
-import { ReactComponent as TotalUsers } from './icons/TotalUsers.svg';
+import Bolu from "./images/Bolu.svg";
+import Chioma from "./images/Chioma.svg";
+import Micheal from "./images/Micheal.svg";
+import Miriam from "./images/Miriam.svg";
+
+import { ReactComponent as RightArrow } from "./icons/RightArrow.svg";
+import { ReactComponent as Approved } from "./icons/Approved.svg";
+import { ReactComponent as GreenArrow } from "./icons/GreenArrow.svg";
+import { ReactComponent as OrangeArrow } from "./icons/OrangeArrow.svg";
+import { ReactComponent as RedArrow } from "./icons/RedArrow.svg";
+import { ReactComponent as Pending } from "./icons/Pending.svg";
+import { ReactComponent as TotalAgents } from "./icons/TotalAgents.svg";
+import { ReactComponent as TotalUsers } from "./icons/TotalUsers.svg";
 
 export {
   Audit,
@@ -43,5 +49,10 @@ export {
   RedArrow,
   Pending,
   TotalAgents,
-  TotalUsers
+  TotalUsers,
+  RightArrow,
+  Bolu,
+  Chioma,
+  Micheal,
+  Miriam,
 };
